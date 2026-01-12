@@ -1,7 +1,14 @@
+import { Routes, Route } from "react-router";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
-export default function App() {
+function App() {
   return (
-    <Login />
-  )
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
+  );
 }
+
+export default App;
