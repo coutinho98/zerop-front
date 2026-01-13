@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../components/retroui/Button";
 import { Input } from "../components/retroui/Input";
 import { Checkbox } from "../components/retroui/Checkbox";
@@ -103,6 +103,17 @@ export default function Login() {
             <Apple size={18} /> Apple
           </Button>
         </div>
+        <footer className="text-center">
+          <p className="text-sm font-bold">
+            Novo por aqui?{" "}
+            <Link
+              to="/signup"
+              className="text-black hover:text-violet-600 transition-colors hover:underline hover:underline-offset-4"
+            >
+              Crie sua conta agora
+            </Link>
+          </p>
+        </footer>
       </div>
     </div>
   );
